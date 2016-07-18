@@ -518,7 +518,7 @@
   videojs.Youtube.prototype.currentSrc = function() {
     return this.srcVal;
   };
-  
+
   videojs.Youtube.prototype.ended = function() {
     return (this.ytplayer) ? (this.lastState === YT.PlayerState.ENDED) : false;
   };
@@ -575,6 +575,10 @@
     } else {
       return videojs.createTimeRange(0, 0);
     }
+  };
+
+  videojs.Youtube.prototype.seeking = function() {
+    return this.isSeeking; //this.ytplayer.getPlayerState() == YT.PlayerState.BUFFERING;
   };
 
   videojs.Youtube.prototype.supportsFullScreen = function() {
