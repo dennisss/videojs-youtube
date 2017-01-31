@@ -57,7 +57,7 @@
         }
       }
 
-      this.player_.options()['playbackRates'] = [];
+      this.player_.options()['playbackRates'] = [1];
 
       this.userQuality = videojs.Youtube.convertQualityName(player.options()['quality']);
 
@@ -953,12 +953,12 @@
       case 'hd1080':
       case 'hd1440':
         setInnerText(label, 'HD');
-        element.appendChild(label);
+        //element.appendChild(label);
         break;
 
       case 'hd2160':
         setInnerText(label, '4K');
-        element.appendChild(label);
+        //element.appendChild(label);
         break;
     }
   };
